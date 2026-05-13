@@ -1,20 +1,224 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Annie Estate</title>
+  <title>エニホームズ</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    /* 上方選單 */
+
+    .navbar {
+
+      background: white;
+
+      padding: 20px 50px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+    }
+
+    /* Logo */
+
+    .logo img {
+
+      width: 300px;
+
+    }
+
+    /* 右邊選單 */
+
+    .menu {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 30px;
+
+    }
+
+    /* 選單文字 */
+
+    .menu a {
+
+      text-decoration: none;
+
+      color: #6b3e26;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      font-size: 18px;
+
+      font-weight: bold;
+
+    }
+
+    .menu a:hover {
+
+      opacity: 0.7;
+
+    }
+    .menu a span {
+
+  font-size: 12px;
+
+  margin-top: 8px;
+
+  letter-spacing: 2px;
+
+}
+
+    /* 聯絡按鈕 */
+
+    .contact-btn {
+
+      background: white;
+
+      border: 2px solid #6b3e26;
+
+      padding: 12px 25px;
+
+      border-radius: 10px;
+
+      color: #6b3e26;
+
+    }
+
+    /* 電話按鈕 */
+
+    .phone-btn {
+
+      background: #6b3e26;
+
+      color: white !important;
+
+      padding: 12px 25px;
+
+      border-radius: 10px;
+
+    }
+
+    /* 主視覺 */
+
+    .hero {
+
+      height: 700px;
+
+      background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop');
+
+      background-size: cover;
+
+      background-position: center;
+
+      color: white;
+
+      padding: 100px;
+
+    }
+
+    /* 大標題 */
+
+    .hero-title {
+
+      font-size: 60px;
+
+      width: 500px;
+
+      background: rgba(0,0,0,0.5);
+
+      padding: 30px;
+
+    }
+
+  </style>
+
 </head>
 
 <body>
 
-  <h1>エニホームズ</h1>
+  <!-- 上方導覽列 -->
 
-  <h2>東京のおすすめ物件</h2>
+  <div class="navbar">
 
-  <p>理想のお部屋を探しましょう。</p>
-<img 
-    src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?q=80&w=1200&auto=format&fit=crop"
-    width="500"
-  />
-  
+    <!-- Logo -->
+
+    <div class="logo">
+
+      <img src="logo.png">
+
+    </div>
+
+    <!-- 右邊選單 -->
+
+    <div class="menu">
+
+       <div class="menu">
+
+  <a href="">
+    ホーム
+    <span>HOME</span>
+  </a>
+
+  <a href="">
+    物件検索
+    <span>SEARCH</span>
+  </a>
+
+  <a href="">
+    会社情報
+    <span>COMPANY</span>
+  </a>
+
+  <a href="">
+    サービス
+    <span>SERVICE</span>
+  </a>
+
+  <a href="">
+    お知らせ
+    <span>NEWS</span>
+  </a>
+
+  <a href="" class="contact-btn">
+    お問い合わせ
+    <span>CONTACT</span>
+  </a>
+
+</div>
+      <a href="" class="phone-btn">
+        ☎ 080-8876-7488
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- 大圖 -->
+
+  <div class="hero">
+
+    <div class="hero-title">
+
+      理想のお部屋を見つけましょう
+
+    </div>
+
+  </div>
+
 </body>
+
 </html>
