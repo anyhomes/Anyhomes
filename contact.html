@@ -235,7 +235,14 @@ body {
 .contact-form button:hover {
   opacity: 0.8;
 }
-    
+    #success-message {
+  display: none;
+  text-align: center;
+  color: #6b3e26;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
   </style>
 
 </head>
@@ -306,27 +313,59 @@ body {
     お気軽にお問い合わせください。
   </p>
 
-  <form class="contact-form">
+ <form
+
+class="contact-form"
+
+action="https://docs.google.com/forms/d/e/1FAIpQLSe_KYvrrHdw1CkFX0XuRZea-Ii0BGPZXUzeetKlDGVxIXOYkw/formResponse"
+
+method="POST"
+
+target="hidden_iframe"
+
+onsubmit="setTimeout(function(){
+window.location.href='thanks.html';
+},500);"
+
+>
 
     <div class="form-group">
       <label>お名前</label>
-      <input type="text" placeholder="お名前をご入力ください">
+      <input type="text"
+
+             name="entry.633764057"
+
+             placeholder="お名前をご入力ください"
+>
     </div>
 
     <div class="form-group">
       <label>電話番号</label>
-      <input type="text" placeholder="090-1234-5678">
+      <input type="text"
+
+             name="entry.1424380198"
+
+             placeholder="090-1234-5678"
+>
     </div>
 
     <div class="form-group">
       <label>Email</label>
-      <input type="email" placeholder="example@email.com">
+      <input type="text"
+
+             name="entry.1610255000"
+
+             placeholder="example@email.com"
+     >
     </div>
 
     <div class="form-group">
       <label>お問い合わせ内容</label>
-      <textarea placeholder="お問い合わせ内容をご入力ください"></textarea>
-    </div>
+      <textarea 
+  name="entry.1819210381"
+  placeholder="お問い合わせ内容をご入力ください"
+></textarea>
+</div>
 
     <button type="submit">
       送信する
@@ -338,7 +377,15 @@ body {
 
     </div>
 
-  
+  <iframe
+name="hidden_iframe"
+style="display:none;"
+></iframe>
+
+<p id="success-message">
+お問い合わせありがとうございました。
+</p>
+
 
  
 
