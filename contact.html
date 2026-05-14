@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>エニホームズ</title>
+
+  <style>
+
+    body {
+      margin: 0;
+      font-family: Arial;
+    }
+
+    /* 上方選單 */
+
+    .navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+
+
+
+    /* Logo */
+
+    .logo img {
+     margin-left: 40px;   /* LOGO 左邊空白 */
+     margin-right: 40px; 
+      width: 300px;
+
+    }
+
+    /* 右邊選單 */
+
+    .menu {
+      margin-left: auto; 
+      margin-right: 40px; 
+      display: flex;
+
+      align-items: center;
+
+      gap: 30px;
+
+    }
+  
+
+
+    /* 選單文字 */
+
+    .menu a {
+
+      text-decoration: none;
+
+      color: #6b3e26;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      font-size: 18px;
+
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .menu a:hover {
+
+      opacity: 0.7;
+
+    }
+    .menu a span {
+
+  font-size: 12px;
+
+  margin-top: 8px;
+
+  letter-spacing: 2px;
+
+}
+
+    /* 聯絡按鈕 */
+
+    .contact-btn {
+
+      background: white;
+
+      border: 2px solid #6b3e26;
+
+      padding: 12px 25px;
+
+      border-radius: 10px;
+
+      color: #6b3e26;
+      text-align: center;
+
+
+    }
+
+    /* 電話按鈕 */
+
+    .phone-btn {
+
+      background: #6b3e26;
+
+      color: white !important;
+
+      padding: 12px 25px;
+
+      border-radius: 10px;
+      text-align: center;
+
+
+    }
+body {
+  background:
+  linear-gradient(
+    135deg,
+    #f8fbff 0%,
+    #edf4ff 50%,
+    #f7fbff 100%
+  );
+}
+
+
+/* 整頁 */
+.contact-page {
+  max-width: 800px;
+
+  margin: 0 auto;
+
+  padding: 20px 40px 80px;
+}
+
+/* 標題 */
+.contact-page h1 {
+  text-align: center;
+
+  font-size: 42px;
+
+  color: #6b3e26;
+
+  margin-bottom: 20px;
+}
+
+/* 副標 */
+.contact-subtitle {
+  text-align: center;
+
+  color: #666;
+
+  line-height: 2;
+
+  margin-bottom: 60px;
+}
+
+/* 表單 */
+.contact-form {
+  background: white;
+
+  padding: 60px;
+
+  border-radius: 30px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* 每個欄位 */
+.form-group {
+  margin-bottom: 35px;
+}
+
+/* 標籤 */
+.form-group label {
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-weight: bold;
+
+  color: #6b3e26;
+
+  font-size: 18px;
+}
+
+/* input */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+
+  padding: 18px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  box-sizing: border-box;
+}
+
+/* textarea */
+.form-group textarea {
+  height: 180px;
+
+  resize: none;
+}
+
+/* 按鈕 */
+.contact-form button {
+  width: 100%;
+
+  padding: 20px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  background: #6b3e26;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  opacity: 0.8;
+}
+    
+  </style>
+
+</head>
+
+<body>
+
+  <!-- 上方導覽列 -->
+
+  <div class="navbar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+      <img src="logo.png">
+
+    </div>
+
+    <!-- 右邊選單 -->
+
+    <div class="menu">
+
+      
+
+        
+
+  <a href="index.html">
+    ホーム
+    <span>HOME</span>
+  </a>
+
+
+
+  <a href="company.html">
+    会社情報
+    <span>COMPANY</span>
+  </a>
+
+  <a href="service.html">
+    サービス
+    <span>SERVICE</span>
+  </a>
+
+  <a href="news.html">
+    お知らせ
+    <span>NEWS</span>
+  </a>
+
+
+
+
+  <a href="contact.html" class="contact-btn">
+    📩お問い合わせ
+    <span>CONTACT</span>
+  </a>
+
+  <a href="" class="phone-btn">
+    ☎ 080-8876-7488
+  </a>
+</div>
+</div>
+<div class="contact-page">
+
+  <h1>お問い合わせ</h1>
+
+  <p class="contact-subtitle">
+    ご相談・ご質問など、
+    お気軽にお問い合わせください。
+  </p>
+
+  <form class="contact-form">
+
+    <div class="form-group">
+      <label>お名前</label>
+      <input type="text" placeholder="お名前をご入力ください">
+    </div>
+
+    <div class="form-group">
+      <label>電話番号</label>
+      <input type="text" placeholder="090-1234-5678">
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" placeholder="example@email.com">
+    </div>
+
+    <div class="form-group">
+      <label>お問い合わせ内容</label>
+      <textarea placeholder="お問い合わせ内容をご入力ください"></textarea>
+    </div>
+
+    <button type="submit">
+      送信する
+    </button>
+
+  </form>
+
+
+
+    </div>
+
+  
+
+ 
+
+  
+
+</body>
+
+</html>
