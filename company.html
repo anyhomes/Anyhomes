@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>会社情報</title>
+
+  <style>
+    
+    body {
+  margin: 0;
+  font-family: Arial, "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  color: #222;
+  background: #fafafa;
+}
+
+    /* 上方選單 */
+
+    .navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+
+
+
+    /* Logo */
+
+    .logo img {
+     margin-left: 40px;   /* LOGO 左邊空白 */
+     margin-right: 40px; 
+      width: 300px;
+
+    }
+
+    /* 右邊選單 */
+
+    .menu {
+      margin-left: auto; 
+      margin-right: 50px; 
+      display: flex;
+
+      align-items: center;
+
+      gap: 30px;
+
+    }
+  
+  
+
+
+    /* 選單文字 */
+
+    .menu a {
+
+      text-decoration: none;
+
+      color: #6b3e26;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      font-size: 18px;
+
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .menu a:hover {
+
+      opacity: 0.7;
+
+    }
+    .menu a span {
+
+  font-size: 12px;
+
+  margin-top: 8px;
+
+  letter-spacing: 2px;
+
+}
+
+    /* 聯絡按鈕 */
+
+    .contact-btn {
+
+      background: white;
+
+      border: 2px solid #6b3e26;
+
+      padding: 12px 25px;
+
+      border-radius: 10px;
+
+      color: #6b3e26;
+      text-align: center;
+
+
+    }
+
+    /* 電話按鈕 */
+
+    .phone-btn {
+
+      background: #6b3e26;
+
+      color: white !important;
+
+      padding: 12px 25px;
+
+      border-radius: 10px;
+      text-align: center;
+
+
+    }
+.company-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 40px;
+}
+
+/* 上方圖片 */
+.company-hero {
+  text-align: center;
+  margin-bottom: 70px;
+
+}
+
+.company-hero img {
+  width: 80%;
+  height: 160px;
+  object-fit: cover;
+ 
+}
+
+.company-hero h1 {
+  font-size: 40px;
+  color: #8e6112;
+  margin: 35px 0 0;
+  letter-spacing: 2px;
+}
+
+/* 各區塊 */
+.company-section {
+  background: rgb(255, 255, 255);
+  padding: 40px 45px;
+  margin-bottom: 45px;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.company-section h2 {
+  font-size: 28px;
+  color: #8e6112;
+  margin-bottom: 25px;
+  border-left: 8px solid #1f4f9a;
+  padding-left: 15px;
+}
+
+.company-section p {
+  line-height: 2;
+  font-size: 16px;
+}
+
+/* 会社概要 */
+.company-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.company-table th {
+  width: 180px;
+  text-align: left;
+  padding: 18px;
+  background: #eef4ff;
+  color: #8e6112;
+  border-bottom: 1px solid #ddd;
+}
+
+.company-table td {
+  padding: 18px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 企業理念 */
+.philosophy-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.philosophy-list div {
+  background: #f6f9ff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid #dce8ff;
+}
+
+.philosophy-list strong {
+  font-size: 20px;
+  color: #8e6112;
+  display: block;
+  margin-bottom: 15px;
+}
+.philosophy-list p {
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+  </style>
+</head>
+
+<body>
+<div class="navbar">
+
+    <!-- Logo -->
+
+    <div class="logo">
+
+      <img src="logo.png">
+
+    </div>
+
+    <!-- 右邊選單 -->
+
+    <div class="menu">
+
+      
+
+        
+
+    <a href="index.html">
+    ホーム
+    <span>HOME</span>
+  </a>
+
+
+
+  <a href="company.html">
+    会社情報
+    <span>COMPANY</span>
+  </a>
+
+  <a href="services.html">
+    サービス
+    <span>SERVICE</span>
+  </a>
+
+  <a href="news.html">
+    お知らせ
+    <span>NEWS</span>
+  </a>
+
+
+
+
+  <a href="" class="contact-btn">
+    📩お問い合わせ
+    <span>CONTACT</span>
+  </a>
+
+  <a href="" class="phone-btn">
+    ☎ 080-8876-7488
+  </a>
+
+
+
+    </div>
+
+  </div>
+
+  <div class="company-page">
+
+    <div class="company-hero">
+      <img src="company.png" >
+      <h1>挑戦し続ける。成長し続ける。</h1>
+    </div>
+
+    <section class="company-section">
+      <h2>▦ ごあいさつ</h2>
+      <p>
+        不動産は、人と住まいを繋ぐ大切な存在です。
+        私たちは、不動産コンサルティングを通じて、
+        お客様一人ひとりに安心と信頼を提供し、
+        安全な住まい探しを支援することを使命としております。
+      </p>
+    </section>
+
+    <section class="company-section">
+      <h2>▦ 会社概要</h2>
+
+      <table class="company-table">
+        <tr>
+          <th>社名</th>
+          <td>エニホームズ株式会社</td>
+        </tr>
+        <tr>
+          <th>代表者</th>
+          <td>代表取締役　杉本 育維</td>
+        </tr>
+        <tr>
+          <th>本社</th>
+          <td>〒116-0013 東京都荒川区西日暮里2-39-7-1005</td>
+        </tr>
+        <tr>
+          <th>TEL</th>
+          <td>080-8876-7488</td>
+        </tr>
+        <tr>
+          <th>設立</th>
+          <td>2023年1月</td>
+        </tr>
+        <tr>
+          <th>資本金</th>
+          <td>500万円（2023年1月現在）</td>
+        </tr>
+        <tr>
+          <th>従業員数</th>
+          <td>2名</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="company-section">
+      <h2>▦ 企業理念</h2>
+
+      <div class="philosophy-list">
+        <div>
+          <strong>1.お客様第一</strong>
+          <p>
+         安心と信頼を大切にしたサービスを提供します。</p>
+        </div>
+        <div>
+          <strong>2.誠実な対応</strong>
+          <p>売買・賃貸・管理を通じて最適な提案を行います。</p>
+        </div>
+        <div>
+          <strong>3.暮らしへの貢献</strong>
+          <p>住まいを通じて豊かな暮らしを支えます。</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+
+</html>
