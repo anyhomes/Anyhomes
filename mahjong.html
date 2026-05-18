@@ -10,19 +10,105 @@
       background: #f8fbff;
       color: #333;
     }
+.navbar {
+  display: flex;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
 
-    .mahjong-page {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 80px 40px;
-      text-align: center;
+
+
+
+    /* Logo */
+
+    .logo img {
+     margin-left: 40px;   /* LOGO 左邊空白 */
+     margin-right: 40px; 
+      width: 300px;
+
     }
 
-    h1 {
+    /* 右邊選單 */
+
+    .menu {
+      margin-left: auto; 
+      margin-right: 40px; 
+      display: flex;
+
+      align-items: center;
+
+      gap: 30px;
+
+    }
+  
+
+
+    /* 選單文字 */
+
+    .menu a {
+
+      text-decoration: none;
+
       color: #6b3e26;
-      font-size: 42px;
-      margin-bottom: 20px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      font-size: 18px;
+
+      font-weight: bold;
+      white-space: nowrap;
     }
+
+    .menu a:hover {
+
+      opacity: 0.7;
+
+    }
+    .menu a span {
+
+  font-size: 12px;
+
+  margin-top: 8px;
+
+  letter-spacing: 2px;
+
+}
+
+    /* 聯絡按鈕 */
+
+    .contact-btn {
+
+      background: white;
+
+      border: 2px solid #6b3e26;
+
+      padding: 12px 25px;
+
+      border-radius: 10px;
+
+      color: #6b3e26;
+      text-align: center;
+
+
+    }
+    .mahjong-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px 40px 80px;
+  text-align: center;
+}
+
+h1 {
+  color: #6b3e26;
+  font-size: 42px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
 
     .subtitle {
       color: #666;
@@ -107,7 +193,56 @@
 </head>
 
 <body>
+ <div class="navbar">
 
+    <!-- Logo -->
+
+    <div class="logo">
+
+      <img src="logo.png">
+
+    </div>
+
+    <!-- 右邊選單 -->
+
+    <div class="menu">
+
+      
+
+        
+
+  <a href="index.html">
+    ホーム
+    <span>HOME</span>
+  </a>
+
+
+
+  <a href="company.html">
+    会社情報
+    <span>COMPANY</span>
+  </a>
+
+  <a href="service.html">
+    サービス
+    <span>SERVICE</span>
+  </a>
+
+  <a href="news.html">
+    お知らせ
+    <span>NEWS</span>
+  </a>
+
+
+
+
+  <a href="contact.html" class="contact-btn">
+    📩お問い合わせ
+    <span>CONTACT</span>
+  </a>
+   </div>
+
+  </div>
   <div class="mahjong-page">
 
     <h1>台麻聴牌器</h1>
