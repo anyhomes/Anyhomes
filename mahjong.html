@@ -189,25 +189,25 @@ h1 {
   font-size: 26px;
   font-weight: bold;
 }
-    @media (max-width: 600px) {
+   @media (max-width: 600px) {
   #hand {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-    overflow-x: auto;
-    padding-top: 10px;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 1px !important;
+    overflow-x: auto !important;
+    white-space: nowrap !important;
   }
 
   #hand .tile-img {
-    width: 20px;
-    height: auto;
-    flex-shrink: 0;
+    width: 23px !important;
+    height: auto !important;
+    flex-shrink: 0 !important;
   }
 
   .hand {
-    padding: 20px 8px;
+    padding: 18px 4px !important;
   }
 }
   </style>
