@@ -190,25 +190,34 @@ h1 {
   font-weight: bold;
 }
  
-  @media (max-width: 600px) {
-  #hand {
+ @media (max-width: 600px) {
+  .hand {
+    padding: 10px 4px;
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
-    gap: 2px;
+    justify-content: flex-start;
+    gap: 4px;
     overflow-x: auto;
-    padding-top: 10px;
+    white-space: nowrap;
   }
 
-  #hand .tile-img {
-    width: 20px;
-    height: auto;
+  .hand strong {
+    font-size: 12px;
     flex-shrink: 0;
   }
 
-  .hand {
-    padding: 20px 5px;
+  #hand {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 1px;
+    min-width: 0;
+  }
+
+  #hand .tile-img {
+    width: 14px;
+    height: auto;
+    flex-shrink: 0;
   }
 }
 
