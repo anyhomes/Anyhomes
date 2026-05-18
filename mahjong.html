@@ -189,6 +189,27 @@ h1 {
   font-size: 26px;
   font-weight: bold;
 }
+    @media (max-width: 600px) {
+  #hand {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    overflow-x: auto;
+    padding-top: 10px;
+  }
+
+  #hand .tile-img {
+    width: 30px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .hand {
+    padding: 20px 8px;
+  }
+}
   </style>
 </head>
 
