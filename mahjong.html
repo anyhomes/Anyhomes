@@ -141,12 +141,11 @@ h1 {
   transition: 0.15s;
 }
 .tile-img {
-  width: 58px;
+  width: 60px;
   height: auto;
 }
 #hand .tile-img {
-  width: 53px;
-  height: auto;
+  width: 50px;
 }
 .tiles button span {
   display: block;
@@ -170,7 +169,7 @@ h1 {
     .result {
       background: white;
       margin-top: 50px;
-      padding: 5px;
+      padding: 10px;
       border-radius: 20px;
       box-shadow: 0 8px 25px rgba(0,0,0,0.08);
       font-size: 20px;
@@ -193,11 +192,27 @@ h1 {
   font-size: 26px;
   font-weight: bold;
 }
- 
+@media (max-width: 600px) {
+  #hand {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    overflow-x: auto;
+    padding-top: 10px;
+  }
 
+  #hand .tile-img {
+    width: 16px;
+    height: auto;
+    flex-shrink: 0;
+  }
 
-
-
+  .hand {
+    padding: 20px 8px;
+  }
+}
   </style>
 </head>
 
@@ -208,8 +223,8 @@ h1 {
 
     <div class="logo">
  <a href="index.html">
-      <img src="logo.png">
-</a>
+      <img src="logo.png"> </a>
+
     </div>
 
     <!-- 右邊選單 -->
@@ -237,7 +252,7 @@ h1 {
     <span>SERVICE</span>
   </a>
 
-  <a href="mahjong.html">
+  <a href="news.html">
     お知らせ
     <span>NEWS</span>
   </a>
@@ -281,7 +296,7 @@ h1 {
     ["1m.png", 0], ["2m.png", 1], ["3m.png", 2], ["4m.png", 3], ["5m.png", 4], ["6m.png", 5], ["7m.png", 6], ["8m.png", 7], ["9m.png", 8],
     ["1p.png", 9], ["2p.png", 10], ["3p.png", 11], ["4p.png", 12], ["5p.png", 13], ["6p.png", 14], ["7p.png", 15], ["8p.png", 16], ["9p.png", 17],
     ["1s.png", 18], ["2s.png", 19], ["3s.png", 20], ["4s.png", 21], ["5s.png", 22], ["6s.png", 23], ["7s.png", 24], ["8s.png", 25], ["9s.png", 26],
-    ["east.png", 27], ["south.png", 28], ["west.png", 29], ["north.png", 30],  ["chun.png", 31],["green.png", 32], ["haku.png", 33],
+    ["east.png", 27], ["south.png", 28], ["west.png", 29], ["north.png", 30],  ["chun.png", 31],["hatsu.png", 32], ["haku.png", 33],
   ];
 
   let hand = [];
@@ -332,11 +347,10 @@ h1 {
   >`
 ).join("");
 
-    if (hand.length < 16) {
-      resultDiv.innerHTML = "あと " + (16 - hand.length) + " 張選択してください。";
-      return;
-    }
-
+    if (!isValidHandCount(hand.length)) {
+  resultDiv.innerHTML = "相公";
+  return;
+}
     const waits = getTenpaiTiles(hand);
 
    if (waits.length === 0) {
@@ -439,9 +453,11 @@ function getSimpleShanten(hand) {
 
   return "3向聴以上";
 }
-
+function isValidHandCount(count) {
+  return [1, 4, 7, 10, 13, 16].includes(count);
+}
  function isWinningHand(tiles) {
-  if (tiles.length !== 17) return false;
+  if (tiles.length % 3 !== 2) return false;
 
   const counts = Array(34).fill(0);
   tiles.forEach(id => counts[id]++);
