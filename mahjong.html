@@ -218,12 +218,14 @@
 function removeTile(index) {
   hand.splice(index, 1);
   updateHand();
-}function getTenpaiTiles(hand) {
+}
+function getTenpaiTiles(hand) {
   const waits = [];
 
   for (let i = 0; i < 34; i++) {
     const count = hand.filter(t => t === i).length;
 
+    // 同一張牌最多4張
     if (count >= 4) continue;
 
     const testHand = [...hand, i];
@@ -294,29 +296,82 @@ function getSimpleShanten(hand) {
   return "3向聴以上";
 }
 
-  function isWinningHand(tiles) {
-    if (tiles.length !== 17) return false;
+ function isWinningHand(tiles) {
+  if (tiles.length !== 17) return false;
 
-    const counts = Array(34).fill(0);
+  const counts = Array(34).fill(0);
+  tiles.forEach(id => counts[id]++);
 
-    tiles.forEach(id => counts[id]++);
-
-    for (let i = 0; i < 34; i++) {
-      if (counts[i] >= 2) {
-        counts[i] -= 2;
-
-        if (canMakeMelds(counts)) {
-          counts[i] += 2;
-          return true;
-        }
-
-        counts[i] += 2;
-      }
-    }
-
-    return false;
+  // 台麻八對子：一刻 + 七對
+  if (isTaiwanEightPairs(counts)) {
+    return true;
   }
 
+  // 一般胡牌：5面子 + 1雀頭
+  for (let i = 0; i < 34; i++) {
+    if (counts[i] >= 2) {
+      counts[i] -= 2;
+
+      if (canMakeMelds(counts)) {
+        counts[i] += 2;
+        return true;
+      }
+
+      counts[i] += 2;
+    }
+  }
+
+  return false;
+}
+ function isTaiwanEightPairs(counts) {
+  // 目標：17張 = 一刻 + 七對
+  // 也就是剛好有一組3張，剩下14張可以變成7對
+
+  for (let triplet = 0; triplet < 34; triplet++) {
+    if (counts[triplet] >= 3) {
+      counts[triplet] -= 3;
+
+      let pairCount = 0;
+      let ok = true;
+
+      for (let i = 0; i < 34; i++) {
+        if (counts[i] === 2) {
+          pairCount++;
+        } else if (counts[i] === 4) {
+          pairCount += 2;
+        } else if (counts[i] === 0) {
+          // 沒事
+        } else {
+          ok = false;
+          break;
+        }
+      }
+
+      counts[triplet] += 3;
+
+      if (ok && pairCount === 7) {
+        return true;
+      }
+    }
+  }
+
+  return false;
+}
+function isEightPairsReady(hand) {
+  if (hand.length !== 16) return false;
+
+  const counts = Array(34).fill(0);
+  hand.forEach(id => counts[id]++);
+
+  let pairCount = 0;
+
+  for (let i = 0; i < 34; i++) {
+    if (counts[i] === 2) pairCount++;
+    if (counts[i] === 4) pairCount += 2;
+  }
+
+  return pairCount === 8;
+}
   function canMakeMelds(counts) {
     let i = counts.findIndex(c => c > 0);
 
