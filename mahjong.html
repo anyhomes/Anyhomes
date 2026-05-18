@@ -189,25 +189,48 @@ h1 {
   font-size: 26px;
   font-weight: bold;
 }
-   @media (max-width: 600px) {
-  #hand {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    gap: 1px !important;
-    overflow-x: auto !important;
-    white-space: nowrap !important;
-  }
-
-  #hand .tile-img {
-    width: 23px !important;
-    height: auto !important;
-    flex-shrink: 0 !important;
+  @media (max-width: 600px) {
+  .mahjong-page {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 
   .hand {
-    padding: 18px 4px !important;
+    padding: 16px 4px !important;
+    overflow: hidden !important;
+  }
+
+  .hand strong {
+    display: block;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  #hand {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+
+    gap: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    white-space: nowrap !important;
+  }
+
+  #hand img,
+  #hand .tile-img {
+    width: 21px !important;
+    min-width: 21px !important;
+    max-width: 21px !important;
+    height: auto !important;
+    flex: 0 0 21px !important;
+    display: block !important;
   }
 }
   </style>
